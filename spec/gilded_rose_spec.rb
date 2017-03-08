@@ -6,12 +6,16 @@ describe GildedRose do
     let(:item_double3){instance_double("Item", :name => 'Backstage passes to a TAFKAL80ETC concert', :sell_in => 15, :quality => 40)}
     let(:item_double4){instance_double("Item", :name => 'Backstage passes to a TAFKAL80ETC concert', :sell_in => 10, :quality => 40)}
     let(:item_double5){instance_double("Item", :name => 'Backstage passes to a TAFKAL80ETC concert', :sell_in => 5, :quality => 40)}
+    let(:conjured_double){instance_double("Item", :name => 'Conjured genie', :sell_in => 15, :quality => 40)}
+    let(:conjured_double2){instance_double("Item", :name => 'Conjured genie', :sell_in => -1, :quality => 40)}
 
     subject(:gilded_rose){described_class.new([item_double])}
     subject(:gilded_rose2){described_class.new([item_double2])}
     subject(:gilded_rose3){described_class.new([item_double3])}
     subject(:gilded_rose4){described_class.new([item_double4])}
     subject(:gilded_rose5){described_class.new([item_double5])}
+    subject(:conjured_gilded_rose){described_class.new([conjured_double])}
+    subject(:conjured_gilded_rose2){described_class.new([conjured_double2])}
 
     it 'initializes with an array of items' do
       expect{described_class.new([item_double])}.not_to raise_error
@@ -68,6 +72,18 @@ describe GildedRose do
           expect(item_double5).to receive(:quality=).with(item_double5.quality+1).exactly(3).times
           gilded_rose5.update_quality
         end
+
+        it 'double decreases the quality of a conjured item' do
+          allow(conjured_double).to receive(:sell_in=){"Received"}
+          expect(conjured_double).to receive(:quality=).with(conjured_double.quality-1).exactly(2).times
+          conjured_gilded_rose.update_quality
+        end
+
+        it ' increases the sell in of a conjured item at the same rate' do
+          allow(conjured_double).to receive(:quality=){"Received"}
+          expect(conjured_double).to receive(:sell_in=).with(conjured_double.sell_in-1)
+          conjured_gilded_rose.update_quality
+        end
       end
 
       context 'sell in < 0' do
@@ -98,6 +114,11 @@ describe GildedRose do
           gilded_rose8.update_quality
         end
 
+        it 'double decreases the quality of a conjured item' do
+          allow(conjured_double2).to receive(:sell_in=){"Received"}
+          expect(conjured_double2).to receive(:quality=).with(conjured_double2.quality-1).exactly(4).times
+          conjured_gilded_rose2.update_quality
+        end
       end
     end
 end

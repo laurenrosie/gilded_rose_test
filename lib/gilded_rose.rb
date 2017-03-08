@@ -12,6 +12,8 @@ class GildedRose
         update_aged(item)
       elsif is_passes?(item)
         update_passes(item)
+      elsif is_conjured?(item)
+        update_conjured(item)
       else
         update_legendary(item)
       end
@@ -56,8 +58,17 @@ class GildedRose
   def update_legendary(item)
   end
 
+  def update_conjured(item)
+    if item.sell_in > 0
+      decrease_sellin(item)
+      2.times{decrease_quality(item) if item.quality > 0}
+    else
+      4.times{decrease_quality(item) if item.quality > 0}
+    end
+  end
+
   def is_regular?(item)
-    !is_aged?(item) && !is_passes?(item) && !is_legendary?(item)
+    !is_aged?(item) && !is_passes?(item) && !is_legendary?(item) && !is_conjured?(item)
   end
 
   def is_aged?(item)
@@ -70,6 +81,10 @@ class GildedRose
 
   def is_legendary?(item)
     item.name == "Sulfuras, Hand of Ragnaros"
+  end
+
+  def is_conjured?(item)
+    item.name == "Conjured genie"
   end
 
   def increase_quality(item)
