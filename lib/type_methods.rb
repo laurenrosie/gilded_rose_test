@@ -5,7 +5,7 @@ module TypeMethods
   end
 
   def is_aged?(item)
-    item.name == "Aged Brie"
+    item.name.split(" ").include?("Aged")
   end
 
   def is_passes?(item)
@@ -13,11 +13,13 @@ module TypeMethods
   end
 
   def is_legendary?(item)
-    item.name == "Sulfuras, Hand of Ragnaros"
+    comma_legendary = item.name.split(", ").include?("Sulfuras")
+    space_legendary = item.name.split(" ").include?("Sulfuras")
+    comma_legendary || space_legendary
   end
 
   def is_conjured?(item)
-    item.name == "Conjured genie"
+    item.name.split(" ").include?("Conjured")
   end
-  
+
 end
