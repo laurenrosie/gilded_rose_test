@@ -1,19 +1,19 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Lauren/makers/GildedRose-Refactoring-Kata/ruby/lib/gilded_rose.rb": [
+      "/Users/Lauren/Desktop/gilded_rose_test/lib/gilded_rose.rb": [
         1,
         null,
         1,
-        6,
+        3,
         null,
         null,
         1,
-        4,
-        4,
-        4,
-        4,
-        4,
+        2,
+        2,
+        2,
+        2,
+        2,
         null,
         null,
         null,
@@ -33,10 +33,10 @@
         null,
         null,
         null,
-        4,
-        4,
+        2,
+        2,
         null,
-        4,
+        2,
         0,
         0,
         0,
@@ -57,22 +57,22 @@
         null,
         null
       ],
-      "/Users/Lauren/makers/GildedRose-Refactoring-Kata/ruby/lib/item.rb": [
+      "/Users/Lauren/Desktop/gilded_rose_test/lib/item.rb": [
         1,
         1,
         null,
         1,
-        8,
-        8,
-        8,
+        4,
+        4,
+        4,
         null,
         null,
         1,
-        2,
+        1,
         null,
         null
       ]
     },
-    "timestamp": 1488989931
+    "timestamp": 1488990629
   }
 }
