@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-08T18:23:22+00:00">2017-03-08T18:23:22+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-08T18:36:17+00:00">2017-03-08T18:36:17+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.31
+         4.15
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>2</b> files in total.
-    <b>68</b> relevant lines. 
-    <span class="green"><b>68</b> lines covered</span> and
+    <b>3</b> files in total.
+    <b>71</b> relevant lines. 
+    <span class="green"><b>71</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#81d2401514d1529c68ce489d1be83da72b6e7790" class="src_link" title="lib/gilded_rose.rb">lib/gilded_rose.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>106</td>
-        <td>60</td>
-        <td>60</td>
+        <td>49</td>
+        <td>27</td>
+        <td>27</td>
         <td>0</td>
-        <td>4.6</td>
+        <td>6.3</td>
       </tr>
       
       <tr>
@@ -68,6 +68,16 @@
         <td>8</td>
         <td>0</td>
         <td>2.1</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#ec6fd1c868870f8532b1ecbf50b2b3d3ca61c1b2" class="src_link" title="lib/update_methods.rb">lib/update_methods.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>65</td>
+        <td>36</td>
+        <td>36</td>
+        <td>0</td>
+        <td>3.0</td>
       </tr>
       
     </tbody>
@@ -91,8 +101,8 @@
     <h3>lib/gilded_rose.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>60</b> relevant lines. 
-      <span class="green"><b>60</b> lines covered</span> and
+      <b>27</b> relevant lines. 
+      <span class="green"><b>27</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -103,7 +113,7 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class GildedRose</code>
+          <code class="ruby">require &#39;./lib/update_methods&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -115,19 +125,19 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  def initialize(items)</code>
+          <code class="ruby">class GildedRose</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="4">
-          <span class="hits">15</span>
+        <li class="never" data-hits="" data-linenumber="4">
           
-          <code class="ruby">    @items = items</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">  include UpdateMethods</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -139,598 +149,256 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
+          <code class="ruby">  def initialize(items)</code>
+        </li>
+      
+        <li class="covered" data-hits="15" data-linenumber="8">
+          <span class="hits">15</span>
+          
+          <code class="ruby">    @items = items</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def update_quality()</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="8">
+        <li class="covered" data-hits="14" data-linenumber="12">
           <span class="hits">14</span>
           
           <code class="ruby">    @items.each do |item|</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="9">
+        <li class="covered" data-hits="14" data-linenumber="13">
           <span class="hits">14</span>
           
           <code class="ruby">      if is_regular?(item)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
+        <li class="covered" data-hits="3" data-linenumber="14">
           <span class="hits">3</span>
           
           <code class="ruby">        update_normal(item)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="11">
+        <li class="covered" data-hits="11" data-linenumber="15">
           <span class="hits">11</span>
           
           <code class="ruby">      elsif is_aged?(item)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="12">
+        <li class="covered" data-hits="2" data-linenumber="16">
           <span class="hits">2</span>
           
           <code class="ruby">        update_aged(item)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="13">
+        <li class="covered" data-hits="9" data-linenumber="17">
           <span class="hits">9</span>
           
           <code class="ruby">      elsif is_passes?(item)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="14">
+        <li class="covered" data-hits="5" data-linenumber="18">
           <span class="hits">5</span>
           
           <code class="ruby">        update_passes(item)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="15">
+        <li class="covered" data-hits="4" data-linenumber="19">
           <span class="hits">4</span>
           
           <code class="ruby">      elsif is_conjured?(item)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="16">
+        <li class="covered" data-hits="3" data-linenumber="20">
           <span class="hits">3</span>
           
           <code class="ruby">        update_conjured(item)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">      else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
           <code class="ruby">        update_legendary(item)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def update_normal(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="26">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    if item.sell_in &gt; 0</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="27">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      decrease_sellin(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="28">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      decrease_quality(item) if item.quality &gt; 0</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="30">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      2.times{decrease_quality(item) if item.quality &gt; 0}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def update_aged(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="35">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    if item.sell_in &gt; 0</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="36">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      decrease_sellin(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="37">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      increase_quality(item) if below_max_quality(item)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="39">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      2.times{increase_quality(item) if below_max_quality(item)}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="43">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def update_passes(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="44">
-          <span class="hits">5</span>
-          
-          <code class="ruby">    if item.sell_in &gt;10</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="45">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      decrease_sellin(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="46">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      increase_quality(item) if below_max_quality(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="47">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    elsif item.sell_in &gt; 5</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      decrease_sellin(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="49">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      2.times{increase_quality(item) if below_max_quality(item)}</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="50">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    elsif item.sell_in &gt; 0</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      decrease_sellin(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="52">
-          <span class="hits">4</span>
-          
-          <code class="ruby">      3.times{increase_quality(item) if below_max_quality(item)}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="54">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      item.quality = 0</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="57">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def update_legendary(item)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="61">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def update_conjured(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="62">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    if item.sell_in &gt; 0</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="63">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      decrease_sellin(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="64">
-          <span class="hits">6</span>
-          
-          <code class="ruby">      2.times{decrease_quality(item) if item.quality &gt; 0}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="65">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="66">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      4.times{decrease_quality(item) if item.quality &gt; 0}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="67">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="68">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="69">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="70">
+        <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_regular?(item)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="71">
+        <li class="covered" data-hits="14" data-linenumber="30">
           <span class="hits">14</span>
           
           <code class="ruby">    !is_aged?(item) &amp;&amp; !is_passes?(item) &amp;&amp; !is_legendary?(item) &amp;&amp; !is_conjured?(item)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="72">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_aged?(item)</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="75">
+        <li class="covered" data-hits="25" data-linenumber="34">
           <span class="hits">25</span>
           
           <code class="ruby">    item.name == &quot;Aged Brie&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="78">
+        <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_passes?(item)</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="79">
+        <li class="covered" data-hits="21" data-linenumber="38">
           <span class="hits">21</span>
           
           <code class="ruby">    item.name == &quot;Backstage passes to a TAFKAL80ETC concert&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="82">
+        <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_legendary?(item)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="83">
+        <li class="covered" data-hits="7" data-linenumber="42">
           <span class="hits">7</span>
           
           <code class="ruby">    item.name == &quot;Sulfuras, Hand of Ragnaros&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="86">
+        <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_conjured?(item)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="87">
+        <li class="covered" data-hits="10" data-linenumber="46">
           <span class="hits">10</span>
           
           <code class="ruby">    item.name == &quot;Conjured genie&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="90">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def increase_quality(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="10" data-linenumber="91">
-          <span class="hits">10</span>
-          
-          <code class="ruby">    item.quality = item.quality + 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="92">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="93">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="94">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def decrease_quality(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="12" data-linenumber="95">
-          <span class="hits">12</span>
-          
-          <code class="ruby">    item.quality = item.quality - 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="96">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="97">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="98">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def decrease_sellin(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="9" data-linenumber="99">
-          <span class="hits">9</span>
-          
-          <code class="ruby">    item.sell_in = item.sell_in - 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="100">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="101">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="102">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def below_max_quality(item)</code>
-        </li>
-      
-        <li class="covered" data-hits="10" data-linenumber="103">
-          <span class="hits">10</span>
-          
-          <code class="ruby">    item.quality &lt; 50</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="104">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="105">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="106">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby">end</code>
@@ -827,6 +495,414 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="ec6fd1c868870f8532b1ecbf50b2b3d3ca61c1b2">
+  <div class="header">
+    <h3>lib/update_methods.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>36</b> relevant lines. 
+      <span class="green"><b>36</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module UpdateMethods</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def update_normal(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      if item.sell_in &gt; 0</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        decrease_sellin(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        decrease_quality(item) if item.quality &gt; 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="9">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        2.times{decrease_quality(item) if item.quality &gt; 0}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def update_aged(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      if item.sell_in &gt; 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        decrease_sellin(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        increase_quality(item) if below_max_quality(item)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="18">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        2.times{increase_quality(item) if below_max_quality(item)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def update_passes(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="23">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      if item.sell_in &gt;10</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="24">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        decrease_sellin(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="25">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        increase_quality(item) if below_max_quality(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="26">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      elsif item.sell_in &gt; 5</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        decrease_sellin(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="28">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        2.times{increase_quality(item) if below_max_quality(item)}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="29">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      elsif item.sell_in &gt; 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        decrease_sellin(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="31">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        3.times{increase_quality(item) if below_max_quality(item)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        item.quality = 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def update_legendary(item)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def update_conjured(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="41">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      if item.sell_in &gt; 0</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="42">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        decrease_sellin(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="43">
+          <span class="hits">6</span>
+          
+          <code class="ruby">        2.times{decrease_quality(item) if item.quality &gt; 0}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="45">
+          <span class="hits">5</span>
+          
+          <code class="ruby">        4.times{decrease_quality(item) if item.quality &gt; 0}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def increase_quality(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="50">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      item.quality = item.quality + 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def decrease_quality(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="54">
+          <span class="hits">12</span>
+          
+          <code class="ruby">      item.quality = item.quality - 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def decrease_sellin(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="58">
+          <span class="hits">9</span>
+          
+          <code class="ruby">      item.sell_in = item.sell_in - 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def below_max_quality(item)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="62">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      item.quality &lt; 50</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">end</code>
