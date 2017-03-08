@@ -3,9 +3,11 @@
     "coverage": {
       "/Users/Lauren/Desktop/gilded_rose_test/lib/gilded_rose.rb": [
         1,
+        1,
         null,
         1,
         null,
+        1,
         1,
         null,
         1,
@@ -26,28 +28,6 @@
         1,
         null,
         null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        14,
-        null,
-        null,
-        1,
-        25,
-        null,
-        null,
-        1,
-        21,
-        null,
-        null,
-        1,
-        7,
-        null,
-        null,
-        1,
-        10,
         null,
         null,
         null
@@ -119,6 +99,31 @@
         null,
         null
       ],
+      "/Users/Lauren/Desktop/gilded_rose_test/lib/type_methods.rb": [
+        1,
+        null,
+        1,
+        14,
+        null,
+        null,
+        1,
+        25,
+        null,
+        null,
+        1,
+        21,
+        null,
+        null,
+        1,
+        7,
+        null,
+        null,
+        1,
+        10,
+        null,
+        null,
+        null
+      ],
       "/Users/Lauren/Desktop/gilded_rose_test/lib/item.rb": [
         1,
         1,
@@ -135,6 +140,6 @@
         null
       ]
     },
-    "timestamp": 1488998177
+    "timestamp": 1488998262
   }
 }
