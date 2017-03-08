@@ -1,5 +1,7 @@
 # Gilded Rose (Ruby)
 
+[![Coverage Status](https://coveralls.io/repos/github/laurenrosie/gilded_rose_test/badge.svg?branch=master)](https://coveralls.io/github/laurenrosie/gilded_rose_test?branch=master)
+
 ## Set Up
 
 Cloned from:
