@@ -5,21 +5,21 @@ module TypeMethods
   end
 
   def is_aged?(item)
-    item.name.split(" ").include?("Aged")
+    item.name.split(" ").include?("Aged") ||     item.name.split(" ").include?("aged")
   end
 
   def is_passes?(item)
-    item.name == "Backstage passes to a TAFKAL80ETC concert"
+    item.name.split(" ").include?("passes") || item.name.split(" ").include?("Passes")
   end
 
   def is_legendary?(item)
-    comma_legendary = item.name.split(", ").include?("Sulfuras")
-    space_legendary = item.name.split(" ").include?("Sulfuras")
+    comma_legendary = item.name.split(", ").include?("Sulfuras") || item.name.split(", ").include?("sulfuras")
+    space_legendary = item.name.split(" ").include?("Sulfuras") || item.name.split(" ").include?("sulfuras")
     comma_legendary || space_legendary
   end
 
   def is_conjured?(item)
-    item.name.split(" ").include?("Conjured")
+    item.name.split(" ").include?("Conjured") ||   item.name.split(" ").include?("conjured")
   end
 
 end
