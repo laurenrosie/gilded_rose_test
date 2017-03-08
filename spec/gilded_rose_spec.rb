@@ -18,6 +18,14 @@ describe GildedRose do
     end
 
     describe '#update_quality' do
+
+      it 'does nothing to a legendary item' do
+        legendary_item_double = instance_double("Item", :name => 'Sulfuras, Hand of Ragnaros', :sell_in => 0, :quality => 80)
+        legendary_gilded_rose = described_class.new([legendary_item_double])
+        expect(legendary_gilded_rose).to receive(:update_legendary).with(legendary_item_double)
+        legendary_gilded_rose.update_quality
+      end
+
       context 'sellin > 0' do
         it 'lowers the quality at the end of each day' do
             allow(item_double).to receive(:sell_in=){"Received"}
