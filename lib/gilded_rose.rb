@@ -1,10 +1,10 @@
-require './lib/update_methods'
-require './lib/type_methods'
+require './lib/item_update_methods'
+require './lib/item_type_methods'
 
 class GildedRose
 
-  include UpdateMethods
-  include TypeMethods
+  include ItemUpdateMethods
+  include ItemTypeMethods
 
   def initialize(items)
     @items = items

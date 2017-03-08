@@ -32,7 +32,7 @@
         null,
         null
       ],
-      "/Users/Lauren/Desktop/gilded_rose_test/lib/update_methods.rb": [
+      "/Users/Lauren/Desktop/gilded_rose_test/lib/item_update_methods.rb": [
         1,
         null,
         1,
@@ -104,7 +104,7 @@
         null,
         null
       ],
-      "/Users/Lauren/Desktop/gilded_rose_test/lib/type_methods.rb": [
+      "/Users/Lauren/Desktop/gilded_rose_test/lib/item_type_methods.rb": [
         1,
         null,
         1,
@@ -147,6 +147,6 @@
         null
       ]
     },
-    "timestamp": 1488998964
+    "timestamp": 1488999340
   }
 }

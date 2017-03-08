@@ -1,4 +1,4 @@
-module TypeMethods
+module ItemTypeMethods
 
   def is_regular?(item)
     !is_aged?(item) && !is_passes?(item) && !is_legendary?(item) && !is_conjured?(item)
