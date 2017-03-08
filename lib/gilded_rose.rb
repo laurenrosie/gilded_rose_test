@@ -6,54 +6,59 @@ class GildedRose
 
   def update_quality()
     @items.each do |item|
-
-      if !is_aged?(item) and !is_passes?(item)
-        if item.quality > 0
-          if !is_legendary?(item)
-            decrease_quality(item)
-          end
-        end
+      if is_regular?(item)
+        update_normal(item)
+      elsif is_aged?(item)
+        update_aged(item)
+      elsif is_passes?(item)
+        update_passes(item)
       else
-        if below_max_quality(item)
-          increase_quality(item)
-          if is_passes?(item)
-            if item.sell_in < 11
-              if below_max_quality(item)
-                increase_quality(item)
-              end
-            end
-            if item.sell_in < 6
-              if below_max_quality(item)
-                increase_quality(item)
-              end
-            end
-          end
-        end
-      end
-      if !is_legendary?(item)
-        item.sell_in = item.sell_in - 1
-      end
-      if item.sell_in < 0
-        if !is_aged?(item)
-          if !is_passes?(item)
-            if item.quality > 0
-              if !is_legendary?(item)
-                decrease_quality(item)
-              end
-            end
-          else
-            item.quality = item.quality - item.quality
-          end
-        else
-          if below_max_quality(item)
-            increase_quality(item)
-          end
-        end
+        update_legendary(item)
       end
     end
   end
 
   private
+
+  def update_normal(item)
+    if item.sell_in > 0
+      decrease_sellin(item)
+      decrease_quality(item) if item.quality > 0
+    else
+      2.times{decrease_quality(item) if item.quality > 0}
+    end
+  end
+
+  def update_aged(item)
+    if item.sell_in > 0
+      decrease_sellin(item)
+      increase_quality(item) if below_max_quality(item)
+    else
+      2.times{increase_quality(item) if below_max_quality(item)}
+    end
+  end
+
+  def update_passes(item)
+    if item.sell_in >10
+      decrease_sellin(item)
+      increase_quality(item) if below_max_quality(item)
+    elsif item.sell_in > 5
+      decrease_sellin(item)
+      2.times{increase_quality(item) if below_max_quality(item)}
+    elsif item.sell_in > 0
+      decrease_sellin(item)
+      3.times{increase_quality(item) if below_max_quality(item)}
+    else
+      item.quality = 0
+    end
+  end
+
+  def update_legendary(item)
+  end
+
+  def is_regular?(item)
+    !is_aged?(item) && !is_passes?(item) && !is_legendary?(item)
+  end
 
   def is_aged?(item)
     item.name == "Aged Brie"
@@ -75,7 +80,12 @@ class GildedRose
     item.quality = item.quality - 1
   end
 
+  def decrease_sellin(item)
+    item.sell_in = item.sell_in - 1
+  end
+
   def below_max_quality(item)
     item.quality < 50
   end
+
 end
