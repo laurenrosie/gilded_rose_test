@@ -5,21 +5,25 @@ module ItemTypeMethods
   end
 
   def is_aged?(item)
-    item.name.split(" ").include?("Aged") ||     item.name.split(" ").include?("aged")
+    is_included_in(" ", item, "aged")
   end
 
   def is_passes?(item)
-    item.name.split(" ").include?("passes") || item.name.split(" ").include?("Passes")
+    is_included_in(" ", item, "passes")
   end
 
   def is_legendary?(item)
-    comma_legendary = item.name.split(", ").include?("Sulfuras") || item.name.split(", ").include?("sulfuras")
-    space_legendary = item.name.split(" ").include?("Sulfuras") || item.name.split(" ").include?("sulfuras")
+    comma_legendary = is_included_in(", ", item, "sulfuras")
+    space_legendary = is_included_in(" ", item, "sulfuras")
     comma_legendary || space_legendary
   end
 
   def is_conjured?(item)
-    item.name.split(" ").include?("Conjured") ||   item.name.split(" ").include?("conjured")
+    is_included_in(" ", item, "conjured")
+  end
+
+  def is_included_in(split, item, string)
+    item.name.split(split).include?(string) || item.name.split(split).include?(string.capitalize)
   end
 
 end

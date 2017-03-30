@@ -111,7 +111,7 @@
         null,
         null,
         1,
-        8,
+        10,
         null,
         null,
         null
@@ -141,6 +141,10 @@
         20,
         null,
         null,
+        1,
+        116,
+        null,
+        null,
         null
       ],
       "/Users/Lauren/Makers/gilded_rose_test/lib/item.rb": [
@@ -159,6 +163,6 @@
         null
       ]
     },
-    "timestamp": 1490870566
+    "timestamp": 1490871418
   }
 }

@@ -36,7 +36,7 @@ module ItemUpdateMethods
       elsif item.sell_in > 5
         decrease_sellin(item)
         NORMAL_QUALITY_INCREASE_MULTIPLE.times{increase_quality(item) if below_max_quality(item)}
-      elsif item.sell_in > MIN_SELL_IN
+      elsif above_min_sell_in(item)
         decrease_sellin(item)
         PASSES_QUALITY_INCREASE_MULTIPLE.times{increase_quality(item) if below_max_quality(item)}
       else
