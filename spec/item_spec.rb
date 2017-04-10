@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Item do
 
   subject(:my_item){described_class.new('Milk', 5, 10)}
+  
   it 'initializes with a name' do
     expect(my_item.name).to eq 'Milk'
   end
